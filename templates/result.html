@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block head %}
+	<title>Processing Result</title>
+{% endblock %}
+{% block body %}
+	<h1>File Processed Successfully!</h1>
+    <p><a href="/download/{{ filename }}">Download Processed File</a></p>
+    <a href="/">Upload Another File</a>
+{% endblock %}
