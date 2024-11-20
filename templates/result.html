@@ -4,7 +4,12 @@
 	<title>Processing Result</title>
 {% endblock %}
 {% block body %}
-	<h1>File Processed Successfully!</h1>
-    <p><a href="/download/{{ filename }}">Download Processed File</a></p>
-    <a href="/">Upload Another File</a>
+	<h1>Image Processed Successfully</h1>
+    <img src="{{ url_for('download_file', filename=filename) }}" alt="Processed Image" style="max-width:100%; height:auto;">
+    <br>
+    <a href="{{ url_for('download_file', filename=filename) }}" download>
+        <button>Download Processed Image</button>
+    </a>
+    <br><br>
+    <a href="{{ url_for('home') }}">Upload Another Image</a>
 {% endblock %}
